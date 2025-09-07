@@ -51,11 +51,9 @@ end
 end
 
 
-if game:GetService("Players").LocalPlayer.Data.Stand.Value == 34 then
 if plr.Character then
     setupCharacter(plr.Character)
 end
 
 -- Re-run on respawn
 plr.CharacterAdded:Connect(setupCharacter)
-end
