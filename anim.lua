@@ -74,10 +74,10 @@ local function setupForCharacter(char)
     end)
 end
 
--- handle current character and respawns
+if game:GetService("Players").LocalPlayer.Data.Stand.Value == 34 then
 local function onChar(char)
     setupForCharacter(char)
 end
-
 if player.Character then onChar(player.Character) end
 player.CharacterAdded:Connect(onChar)
+end
