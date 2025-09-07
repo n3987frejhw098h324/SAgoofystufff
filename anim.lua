@@ -19,6 +19,9 @@ local function setupForCharacter(char)
     local hum = char:WaitForChild("Humanoid", 5)
     if not hum then return end
 
+if player.Data:WaitForChild("Stand").Value ~= 34 then
+    return
+end
     -- animations
     local idleTopTrack = hum:LoadAnimation(createAnim(IDLE_TOP_ID))
     local idleBottomTrack = hum:LoadAnimation(createAnim(IDLE_BOTTOM_ID))
@@ -74,7 +77,6 @@ local function setupForCharacter(char)
     end)
 end
 
-if game:GetService("Players").LocalPlayer.Data.Stand.Value == 34 then
 local function onChar(char)
     setupForCharacter(char)
 end
