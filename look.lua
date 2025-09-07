@@ -15,7 +15,10 @@ local parts = {
 local function setupCharacter(char)
     local stand = char:WaitForChild("Stand")
     
-    -- Trail loop
+if player.Data:WaitForChild("Stand").Value ~= 34 then
+    return
+end
+
     task.spawn(function()
         while char.Parent do  -- stops if char is destroyed
             task.wait(0.1)
